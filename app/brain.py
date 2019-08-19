@@ -45,6 +45,7 @@ print("These are the layer variables: {}".format(l0.get_weights()))
 
 # A little experiment
 # Just for fun, what if we created more Dense layers with different units, which therefore also has more variables?
+print("\nFor fun, creating a modal with 3 layers dense. to predict fahrenheit from celsius")
 
 l0 = tf.keras.layers.Dense(units=4, input_shape=[1])
 l1 = tf.keras.layers.Dense(units=4)
