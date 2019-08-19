@@ -38,7 +38,7 @@ plt.ylabel("Loss Magnitude")
 plt.plot(history.history['loss'])
 
 # Use the model to predict values
-print(model.predict([100.0]))
+print("Model predicts that 100 degrees Celsius is: {} degrees Fahrenheit".format(model.predict([100.0])))
 
 # Looking at the layer weights
 print("These are the layer variables: {}".format(l0.get_weights()))
@@ -54,7 +54,6 @@ model = tf.keras.Sequential([l0, l1, l2])
 model.compile(loss='mean_squared_error', optimizer=tf.keras.optimizers.Adam(0.1))
 model.fit(celsius_q, fahrenheit_a, epochs=500, verbose=False)
 print("Finished training the model")
-print(model.predict([100.0]))
 print("Model predicts that 100 degrees Celsius is: {} degrees Fahrenheit".format(model.predict([100.0])))
 print("These are the l0 variables: {}".format(l0.get_weights()))
 print("These are the l1 variables: {}".format(l1.get_weights()))
